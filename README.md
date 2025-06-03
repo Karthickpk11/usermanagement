@@ -1,5 +1,6 @@
 Hibernate Schema Management:
 Setting up your database schema in Hibernate is key to seamless development and production. _spring.jpa.hibernate.ddl-auto_ options so you can pick the perfect fit for each environment and avoid schema headaches.
+
 **Configuration Options Explained**
 _none_ - Locked Down
 No changes to the schema.
