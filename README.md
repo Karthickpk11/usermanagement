@@ -31,4 +31,4 @@ Choosing the Right Option by Environment:
 
 **Hibernate - @GeneratedValue Annotation in JPA**
 
-Here used _GenerationType.IDENTITY_ for Relies on the database’s auto-increment feature, Supported by MySQL, PostgreSQL, SQL Server, etc.
+Here used _GenerationType.IDENTITY_ for Relies on the database’s auto-increment feature, Supported by MySQL, PostgreSQL, SQL Server, etc.  The @GeneratedValue annotation with GenerationType Identity indicates that the primary key will be generated automatically by the database.
