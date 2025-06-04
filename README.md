@@ -32,3 +32,21 @@ Choosing the Right Option by Environment:
 **Hibernate - @GeneratedValue Annotation in JPA**
 
 Here used _GenerationType.IDENTITY_ for Relies on the database’s auto-increment feature, Supported by MySQL, PostgreSQL, SQL Server, etc.  The @GeneratedValue annotation with GenerationType Identity indicates that the primary key will be generated automatically by the database.
+
+**Hibernate**
+
+Hibernate is a popular ORM (Object-Relational Mapping) framework.
+It implements the JPA specification.
+Hibernate provides the actual code for mapping objects to database tables, querying data, and managing transactions.
+
+**Spring Data JPA**
+
+Spring Data JPA is a higher-level abstraction built on top of JPA.
+It simplifies data access by providing a more streamlined API.
+It reduces the amount of boilerplate code required to interact with databases.
+It automatically generates common database queries and handles transactions.
+It uses Hibernate as the underlying JPA provider by default.
+
+**Relationship :**
+JPA is the specification, Hibernate is an implementation of JPA, and Spring Data JPA is a framework that makes it easier to use JPA in Spring applications. 
+Spring Data JPA cannot work without a JPA provider like Hibernate. 
