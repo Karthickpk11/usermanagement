@@ -63,5 +63,14 @@ Now run your application and test it out. Hit the following URL:
 localhost:8085/userserviceapi
 
 It will add the user to the database.
+![image](https://github.com/user-attachments/assets/0f3e007d-d000-46bd-acc3-5b12ef69a8eb)
+
+And, hit the following URL to generate the token.
+![image](https://github.com/user-attachments/assets/fef77492-58ab-4db7-9794-f5fa4d660098)
+
+Using this take we can access our endpoint according to the ROLE. Hit the following URL and put the Bearer token.
+![image](https://github.com/user-attachments/assets/055ce7f6-d85a-4134-b064-59442c9d5530)
+
+
 
 
