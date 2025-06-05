@@ -14,9 +14,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-
 import static org.slf4j.LoggerFactory.getLogger;
 
 @RestController
@@ -89,8 +87,4 @@ public class UserController {
         }
     }
 
-    @GetMapping("/user/userProfile")
-    public String welcome() {
-        return "Welcome to User Profile";
-    }
 }
