@@ -9,7 +9,6 @@ import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -38,7 +37,8 @@ public class UsermanagementApplication {
 
     @Bean
     public OpenAPI customOpenAPI() {
-        return new OpenAPI().addSecurityItem(new SecurityRequirement().addList("Bearer Authentication")).components(new Components().addSecuritySchemes("Bearer Authentication", createAPIKeyScheme())).info(new Info().title("My REST API").description("Some custom description of API.").version("1.0").contact(new Contact().name("Karthick Kalimuthu").email("karthick@@gmail.com").url("localhost:8085")).license(new License().name("License of API").url("API license URL")));
+        return new OpenAPI().addSecurityItem(new SecurityRequirement().addList("Bearer Authentication")).components(new Components().addSecuritySchemes("Bearer Authentication", createAPIKeyScheme())).info(new Info().title("UserManagement " +
+                "API").description("Some custom description of API.").version("1.0").contact(new Contact().name("Karthick Kalimuthu").email("karthick@@gmail.com").url("localhost:8085")).license(new License().name("License of API").url("API license URL")));
     }
 
 }
