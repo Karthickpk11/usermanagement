@@ -16,13 +16,14 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
-    private String userName;
+    private Long id;
+    private String username;
     private String password;
     private String email;
     private String phone;
     private String address;
     private String gender;
     private Date birthday;
-    private String city;
+    private String country;
+    private String roles;
 }

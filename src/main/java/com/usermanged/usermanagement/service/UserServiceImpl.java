@@ -1,7 +1,7 @@
 package com.usermanged.usermanagement.service;
 
 import com.usermanged.usermanagement.model.User;
-import com.usermanged.usermanagement.repository.UserRepositor;
+import com.usermanged.usermanagement.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,26 +11,26 @@ import java.util.List;
 public class UserServiceImpl {
 
     @Autowired
-    private UserRepositor userRepositor;
+    private UserRepository userRepository;
 
     public List<User> getAllUsers() {
-        return userRepositor.findAll();
+        return userRepository.findAll();
     }
 
     public User getUserById(Long id) {
-        return userRepositor.findById(id).get();
+        return userRepository.findById(id).get();
     }
 
     public User addUser(User user) {
-        return userRepositor.save(user);
+        return userRepository.save(user);
     }
 
     public User updateUser(User user) {
-        return userRepositor.save(user);
+        return userRepository.save(user);
     }
 
     public void deleteUser(Long id) {
-        userRepositor.deleteById(id);
+        userRepository.deleteById(id);
     }
 
 }
