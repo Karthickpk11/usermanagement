@@ -22,7 +22,7 @@ public class UserLoginServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<User> user = userRepository.findByEmail(username);
+        Optional<User> user = userRepository.findByUsername(username);
         // Converting UserInfo to UserDetails
         return user.map(UserInfoDetails::new).orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
     }
