@@ -71,6 +71,10 @@ And, hit the following URL to generate the token.
 Using this take we can access our endpoint according to the ROLE. Hit the following URL and put the Bearer token.
 ![image](https://github.com/user-attachments/assets/055ce7f6-d85a-4134-b064-59442c9d5530)
 
+Issue faced:
+![image](https://github.com/user-attachments/assets/8b50892a-8263-4050-b7e3-c5faa05d32e4)
 
+Solution:
+Registered a PasswordEncoder bean in UsermanagementApplication to avoid the circular-references issue.
 
 
