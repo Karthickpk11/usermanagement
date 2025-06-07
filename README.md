@@ -1,3 +1,9 @@
+Project Content:
+
+1. Spring JPA
+2. Spring Security with JWT Token
+3. Rate Limiter with Spring AOP
+
 **Hibernate**
 
 Hibernate is a popular ORM (Object-Relational Mapping) framework.
