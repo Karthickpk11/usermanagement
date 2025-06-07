@@ -83,5 +83,12 @@ Rate limiting is a technique used to control the rate of incoming requests to a 
 
 In Spring Boot, we can implement a rate limiter using different approaches. One way to implement a rate limiter is to use the Spring AOP (Aspect-Oriented Programming) module to intercept method calls and apply rate-limiting logic.
 
+In the project implement a rate limiter with using the Spring AOP. if hit request more than setting limit you will get below exception message in console. 
+![image](https://github.com/user-attachments/assets/15778b19-e3aa-4562-b79a-b8fe3fdff6be)
+
+
+
+
+
 
 
