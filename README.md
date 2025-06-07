@@ -77,4 +77,11 @@ Issue faced:
 Solution:
 Registered a PasswordEncoder bean in UsermanagementApplication to avoid the circular-references issue.
 
+**Rate limiter with Spring AOP**
+
+Rate limiting is a technique used to control the rate of incoming requests to a service or API.Rate limiting can help improve the reliability and availability of a service by preventing overload situations, ensuring that resources are used efficiently, and protecting against malicious or abusive traffic. It’s commonly used in web applications, APIs, and microservices to manage traffic and ensure that users and systems are not negatively affected by excessive requests.
+
+In Spring Boot, we can implement a rate limiter using different approaches. One way to implement a rate limiter is to use the Spring AOP (Aspect-Oriented Programming) module to intercept method calls and apply rate-limiting logic.
+
+
 
