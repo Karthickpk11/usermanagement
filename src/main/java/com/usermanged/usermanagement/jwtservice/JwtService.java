@@ -1,27 +1,22 @@
 package com.usermanged.usermanagement.jwtservice;
 
-import com.usermanged.usermanagement.filter.JwtAuthFilter;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import org.slf4j.Logger;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
-
 import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-import static org.slf4j.LoggerFactory.getLogger;
-
 @Component
 public class JwtService {
 
-    Logger log = getLogger(JwtService.class);
+//    Logger log = getLogger(JwtService.class);
 
     public static final String SECRET = "5367566859703373367639792F423F452848284D6251655468576D5A71347437";
 
@@ -72,9 +67,9 @@ public class JwtService {
 
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
-        log.info("validateToken: username = {}", username);
-        log.info("validateToken: token = {}", token);
-        log.info("validateToken: isTokenExpired(token) = {}", isTokenExpired(token));
+//        log.info("validateToken: username = {}", username);
+//        log.info("validateToken: token = {}", token);
+//        log.info("validateToken: isTokenExpired(token) = {}", isTokenExpired(token));
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 }

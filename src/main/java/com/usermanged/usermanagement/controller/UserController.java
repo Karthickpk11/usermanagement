@@ -5,7 +5,6 @@ import com.usermanged.usermanagement.model.AuthRequest;
 import com.usermanged.usermanagement.model.User;
 import com.usermanged.usermanagement.service.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,14 +14,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import static org.slf4j.LoggerFactory.getLogger;
 
 @RestController
 @RequestMapping("/userserviceapi")
 @RequiredArgsConstructor
 public class UserController {
 
-    Logger logger = getLogger(UserController.class);
+//    Logger logger = getLogger(UserController.class);
 
     @Autowired
     private UserServiceImpl userService;
@@ -74,15 +72,15 @@ public class UserController {
 
     @PostMapping("/authToken")
     public ResponseEntity<String> authenticateAndGetToken(@RequestBody AuthRequest authRequest) {
-        logger.info("authenticateAndGetToken method begin");
+//        logger.info("authenticateAndGetToken method begin");
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
         );
         if(authentication.isAuthenticated()){
-            logger.info("authenticateAndGetToken method end");
+//            logger.info("authenticateAndGetToken method end");
             return new ResponseEntity<>(jwtService.generateToken(authRequest.getUsername()), HttpStatus.OK);
         } else {
-            logger.info("authenticateAndGetToken method end");
+//            logger.info("authenticateAndGetToken method end");
             throw new UsernameNotFoundException("Invalid username or password");
         }
     }

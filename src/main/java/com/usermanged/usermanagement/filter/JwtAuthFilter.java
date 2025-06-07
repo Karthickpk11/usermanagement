@@ -5,7 +5,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.slf4j.Logger;
+//import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -22,7 +22,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 @Component
 public class JwtAuthFilter extends OncePerRequestFilter {
 
-    Logger logger = getLogger(JwtAuthFilter.class);
+//    Logger logger = getLogger(JwtAuthFilter.class);
 
     private UserDetailsService userDetailsService;
     private JwtService jwtService;
@@ -48,20 +48,20 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         String authHeader = request.getHeader("Authorization");
         String token = null;
         String username = null;
-        logger.info("authHeader: {}", authHeader);
+//        logger.info("authHeader: {}", authHeader);
 
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             token = authHeader.substring(7);
             username = jwtService.extractUsername(token);
-            logger.info("token: {}", token);
-            logger.info("username: {}", username);
+//            logger.info("token: {}", token);
+//            logger.info("username: {}", username);
         }
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-            logger.info("userDetails: {}", userDetails.getUsername());
+//            logger.info("userDetails: {}", userDetails.getUsername());
             if (jwtService.validateToken(token, userDetails)) {
-                logger.info("userDetails: {}", userDetails.getAuthorities());
+//                logger.info("userDetails: {}", userDetails.getAuthorities());
                 UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
                         userDetails,
                         null,
